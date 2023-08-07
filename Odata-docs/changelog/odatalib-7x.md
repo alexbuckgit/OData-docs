@@ -28,6 +28,83 @@ There was a lot of vestigial code left around from the OData v1-3 days that we�
 
 Most of our API improvements fall into the category of namespace simplifications or updating verbiage. The single most impactful change that we made was deciding to merge entity type and complex type in ODataLib. We did this because complex type and entity type are becoming more and more similar in the protocol, but we continue to pay overhead to make things work for both of them.
 
+## ODataLib 7.15.0 Release
+
+***Improvements***
+
+* Add support for writing JsonElement values in ODataWriter by @habbes in https://github.com/OData/odata.net/pull/2619
+* support reading relative context urls with bulk updates by @ElizabethOkerio in https://github.com/OData/odata.net/pull/2618
+* Cache container elements in ODataUriResolver model elements cache by @habbes in https://github.com/OData/odata.net/pull/2623
+* Update version to 7.15.0 by @habbes in https://github.com/OData/odata.net/pull/2629
+
+***Fixed bugs***
+
+* Fix ArgumentException regression in ProjectPlanCompiler by @habbes in https://github.com/OData/odata.net/pull/2624
+
+## ODataLib 7.14.0 Release
+
+***Fixed Bugs***
+
+* fix: ExpressionWriter only prepend slash to method when we have a parent by @uffelauesen in [#2572](https://github.com/OData/odata.net/pull/2572)
+* Ported DataServiceContext.AutoNullPropagation from V3 ODL by @uffelauesen in [#2573](https://github.com/OData/odata.net/pull/2573)
+
+## ODataLib 7.13.0 Release
+
+***Fixed Bugs***
+
+* shouldn't require id to write a deleted resource by @ElizabethOkerio in https://github.com/OData/odata.net/pull/2521
+* Update onboarding documentation to note that long repository root paths can cause build failures by @corranrogue9 in https://github.com/OData/odata.net/pull/2551
+* Fix compilation on Linux (duplicate) by @habbes in https://github.com/OData/odata.net/pull/2549
+* added logic to treat a dynamic property that contains a json array as… by @corranrogue9 in https://github.com/OData/odata.net/pull/2547
+* Support NavigationPropertyBinding paths ending in cast segments by @mikepizzo in https://github.com/OData/odata.net/pull/2504
+* Add test for throwing exception for multiple unnamed keys by @KenitoInc in https://github.com/OData/odata.net/pull/2559
+* odata.id annotation property should be written for transient complex resource by @gathogojr in https://github.com/OData/odata.net/pull/2566
+* Validate that a recursive complex-typed property must be nullable by @lisicase in https://github.com/OData/odata.net/pull/2558
+* issue #2098: fix the issue ODataException: To compute an entity's metadata, its key and concurrency-token property values must be provided by @xuzhg in https://github.com/OData/odata.net/pull/2552
+* Fix PublicAPI build checks by @corranrogue9 in https://github.com/OData/odata.net/pull/2575
+* Fix bugs causing separator to be omitted after ODataUtf8JsonWriter.WriteRawValue  by @habbes in https://github.com/OData/odata.net/pull/2527
+* Fix performance regression in DataServiceContext DefaultResolveType method by @gathogojr in https://github.com/OData/odata.net/pull/2569
+* revving version number to 7.13.0 and updating PublicAPI.Shipped.txt f… by @corranrogue9 in https://github.com/OData/odata.net/pull/2582
+
+## ODataLib 7.12.5 Release
+
+***Fixed Bugs***
+
+* Fix race condition in `ClientEdmModel.GetOrCreateEdmType` in [#2533](https://github.com/OData/odata.net/pull/2533)
+* Fix `ArgumentException` in `ProjectPlanCompiler` caused by missing `materializerContext` argument in dynamic calls in [#2535](https://github.com/OData/odata.net/pull/2535)
+* Add `matchesPattern` support in [#2519](https://github.com/OData/odata.net/pull/2519)
+
+## ODataLib 7.12.4 Release
+
+***Fixed Bugs***
+
+* Fix `NullReferenceException` thrown by URI parsers when filtering by unknown property in [#2496](https://github.com/OData/odata.net/pull/2496)
+* Fix the ordering of an assertion in [#2493](https://github.com/OData/odata.net/pull/2493)
+* Fix MaterializerEntry Id property getter triggered in no tracking scenarios in [#2524](https://github.com/OData/odata.net/pull/2524)
+* Change the `ToJson` function of ODataErrorDetail to deal with escaped strings in [#2511](https://github.com/OData/odata.net/pull/2511)
+* Fix issue where CsdlWriter TryWriteCsdl does not trigger flushing of XmlWriter buffer in [#2523](https://github.com/OData/odata.net/pull/2523)
+* Fixed an issue that led us to ship a debug build in 7.12.3 [#2526](https://github.com/OData/odata.net/pull/2526)
+
+***Improvements***
+
+* Perfomance improvement in async serialization through async elision in [#2481](https://github.com/OData/odata.net/pull/2481)
+* Reduce ODataUri allocations during serialization in [#2500](https://github.com/OData/odata.net/pull/2500)
+
+
+## ODataLib 7.12.3 Release
+
+***Fixed Bugs***
+
+[[#2487]](https://github.com/OData/odata.net/pull/2487) Fixed bug in `LoadProperty` for complex properties and complex collection properties
+
+[[#2497]](https://github.com/OData/odata.net/pull/2497) Fixed bug causing JSON batch responses in WebAPI to be written out of order when using `DefaultStreamBasedJsonWriterFactory`.
+
+***Improvements***
+
+[[#2489]](https://github.com/OData/odata.net/pull/2489) Perf improvement in the internal `ODataPath` cloning constructor.
+
+[[#2506]](https://github.com/OData/odata.net/pull/2506) Reduce memory usage in OData Client by eliminating static `ConditionalWeakTable`.
+
 ## ODataLib 7.12.2 Release
 
 ***Features***

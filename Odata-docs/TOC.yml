@@ -51,6 +51,56 @@
 - name: Develop
   expanded: true
   items:
+  - name: ASP.NET Core OData 8
+    items:
+      - name: Overview
+        href: /odata/webapi-8/overview
+      - name: Getting started
+        href: /odata/webapi-8/getting-started
+      - name: Fundamentals
+        items:
+          - name: Overview
+            href: /odata/webapi-8/fundamentals/overview
+          - name: Routing
+            items:
+              - name: Routing overview
+                href: /odata/webapi-8/fundamentals/routing-overview
+              - name: EntitySet routing
+                href: /odata/webapi-8/fundamentals/entityset-routing
+              - name: Entity routing
+                href: /odata/webapi-8/fundamentals/entity-routing
+              - name: Singleton routing
+                href: /odata/webapi-8/fundamentals/singleton-routing
+              - name: Navigation routing
+                href: /odata/webapi-8/fundamentals/navigation-routing
+              - name: Function routing
+                href: /odata/webapi-8/fundamentals/function-routing
+              - name: Action routing
+                href: /odata/webapi-8/fundamentals/action-routing
+              - name: Reference routing
+                href: /odata/webapi-8/fundamentals/ref-routing
+              - name: Property routing
+                href: /odata/webapi-8/fundamentals/property-routing
+              - name: Metadata routing
+                href: /odata/webapi-8/fundamentals/metadata-routing
+          - name: Query options
+            href: /odata/webapi-8/fundamentals/query-options
+          - name: Actions and Functions
+            href: /odata/webapi-8/fundamentals/actions-functions
+          - name: Paging
+            items:
+              - name: Paging overview
+                href: /odata/webapi-8/fundamentals/paging-overview
+              - name: Client-driven paging
+                href: /odata/webapi-8/fundamentals/client-driven-paging
+              - name: Server-driven paging
+                href: /odata/webapi-8/fundamentals/server-driven-paging
+      - name: Tutorials
+        items:
+          - name: Basic CRUD operations
+            href: /odata/webapi-8/tutorials/basic-crud
+          - name: Implementing a custom skip token handler
+            href: /odata/webapi-8/tutorials/custom-skiptokenhandler
   - name: ASP.NET WebAPI
     items:
       - name: Getting started
@@ -155,7 +205,7 @@
           - name: Key value binding
             href: /odata/webapi/key-value-binding
           - name: Merge complex type and entity type
-            href: /odata/webapi/merge-complex-and-entity
+            href: /odata/odatalib/merge-complex-and-entity
           - name: Query options in request body
             href: /odata/webapi/query-options-in-request-body
           - name: Automatic support for nested paths with [EnableNestedPaths]
@@ -225,7 +275,7 @@
         - name: Customizable type facets promotion in URI parsing
           href: /odata/odatalib/customizable-type-facets-promotion
         - name: Merge complex type and entity type
-          href: /odata/odatalib/merge-complex-and-entity-read-writer
+          href: /odata/webapi/merge-complex-and-entity-read-writer
         - name: OData Uri Path Parser Extensibility
           href: /odata/odatalib/uri-parser-path-extensibility
         - name: Override type annotation in serialization

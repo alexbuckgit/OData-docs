@@ -34,7 +34,7 @@ public IEdmModel GetEdmModel()
 }
 ```
 
-The Edm Model built by this way is called **un-typed** (or **typeless, week type**) Edm model. Owing that there is no corresponding CLR classes.
+The Edm Model built by this way is called **un-typed** (or **typeless, weak type**) Edm model. Owing that there is no corresponding CLR classes.
 
 #### Non-convention model builder
 
@@ -51,7 +51,7 @@ public static IEdmModel GetEdmModel()
 
 #### Convention model builder
 
-To build an Edm model using convention model builder is to create an `IEdmModel` object by a set of conventions. Such conventions are pre-defined rules in Web API OData to help model builder to identify Edm types, keys, association etc automatically, and build them into the final Edm model. `ODataConventionModelBuilder` wrappers these conventions and apply them to the Edm model when building. The basic code structure of this way is shown as:
+To build an Edm model using convention model builder is to create an `IEdmModel` object by a set of conventions. Such conventions are pre-defined rules in Web API OData to help model builder to identify Edm types, keys, association etc automatically, and build them into the final Edm model. `ODataConventionModelBuilder` wraps these conventions and applies them to the Edm model when building. The basic code structure of this way is shown as:
 
 ```C#
 public static IEdmModel GetEdmModel()
